@@ -738,6 +738,9 @@
   }
 }
 @media (max-width: 992px) {
+  .app-card-info {
+    height: 100% !important;
+  }
   .app-cart-card {
     width: 100% !important;
     border-top-left-radius: 0px !important;
