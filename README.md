@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 <div style="display: flex; justify-content: space-between;">
     <img src="https://imgur.com/fPIwHT6.png" alt="Descrição da imagem 1" width="48%">
-    <img src="https://imgur.com/fPIwHT6.png" alt="Descrição da imagem 2" width="48%">
+    <img src="https://imgur.com/KiSqDWx.png" alt="Descrição da imagem 2" width="48%">
 </div>
 
 ## Getting Started
