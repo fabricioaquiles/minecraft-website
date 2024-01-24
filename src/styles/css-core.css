@@ -1,0 +1,764 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap");
+
+:root {
+  --primary-color: rgb(211, 176, 0);
+  --secondary-color: rgb(236, 197, 3);
+}
+
+.app-card-product-primary-button {
+  padding: 10px;
+  background-color: rgb(236, 197, 3);
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+
+.app-card-product-secondary-button {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  color: #666;
+  font-size: 20px;
+  margin-left: 5px;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.app-card-product-secondary-button:hover {
+  color: #666;
+  transition: 0.5s;
+  background-color: rgba(250, 246, 246, 0.625);
+}
+
+.app-card-product-primary-button:hover {
+  transition: 0.5s;
+  background-color: rgba(214, 180, 8, 0.926);
+  color: white;
+}
+
+.app-card-product {
+  background: rgb(242, 242, 242);
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+}
+.app-card-product-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.app-card-product h1 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #888;
+  margin-bottom: 0px;
+}
+
+.app-card-product p {
+  font-size: 30px;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.app-card-product:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.app-modal-active {
+  top: 0 !important;
+}
+
+.app-modal-opened {
+  top: 0 !important;
+  transition: 0.5s !important;
+}
+
+.app-card-modal-root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 9000px;
+  left: 0;
+  z-index: 1035;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+.app-card-modal {
+  position: fixed;
+  background: white;
+  width: 600px !important;
+  height: 90%;
+  border-radius: 20px !important;
+  padding: 15px;
+  transition: 1s;
+}
+
+.app-card-modal-header {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  margin-top: -50px;
+}
+.app-card-modal-header h2 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  font-size: 40px;
+}
+
+.app-card-modal-body {
+  width: calc(100% + 30px);
+  height: 90%;
+  margin-left: -15px;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.app-card-modal-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  margin-top: -15px;
+  margin-right: -15px;
+}
+.app-card-modal-actions a {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  background: rgb(236, 197, 3);
+  padding: 20px;
+  font-weight: 600;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.app-card-modal-actions a:hover {
+  cursor: pointer;
+}
+
+.app-card-modal-background {
+  position: fixed;
+  width: 100%;
+  z-index: 1034;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 9000px;
+  left: 0;
+}
+
+.app-card-category {
+  margin-top: 20px;
+}
+
+.app-card-category .app-card-border {
+  margin-bottom: 10px;
+}
+
+.app-card-category p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #999;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.app-card-border {
+  width: 50px;
+  height: 5px;
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.app-card-meta {
+  margin-top: 10px;
+  background: rgb(242, 242, 242);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.app-card-meta h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #999;
+  font-size: 20px;
+}
+
+.app-card-meta .app-card-meta-info {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.app-card-meta p {
+  text-align: center;
+  color: #999;
+}
+
+.app-card-meta .app-card-meta-img {
+  border: 2px solid var(--secondary-color);
+  padding: 5px;
+  border-radius: 10px;
+  width: 100px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.app-card-list-categorys {
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(242, 242, 242);
+}
+
+.app-card-list-categorys ul {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.app-card-list-categorys li {
+  padding: 5px;
+}
+.app-card-list-categorys a {
+  font-family: "Poppins", sans-serif;
+  color: #999 !important;
+}
+.app-card-list-categorys a:hover {
+  cursor: pointer;
+  color: #666 !important;
+}
+
+.app-card-border-left {
+  width: 5px;
+  height: 25px;
+  background: var(--secondary-color);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.app-card-info {
+  margin-top: 20px;
+  background-color: rgb(242, 242, 242);
+  height: 395px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.app-card-info .app-card-info-alert {
+  display: flex;
+}
+.app-card-info h1 {
+  align-items: center;
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+  color: #888;
+  font-size: 20px;
+}
+
+.app-card-info-description p {
+  color: #999;
+}
+
+.app-cart-active {
+  top: 0 !important;
+}
+
+.app-cart-opened {
+  left: calc((100vw - 400px) + 0.4rem) !important;
+  transition: 0.5s !important;
+}
+
+.app-cart-card-background {
+  display: flex;
+  top: 9000px;
+  position: fixed;
+  z-index: 1033;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app-cart-area-close {
+  width: calc(100% - 400px);
+  height: 100%;
+}
+
+.app-cart-card {
+  position: fixed;
+  transition: 0.5s;
+  left: 9000px;
+  padding: 20px;
+  background: rgb(242, 242, 242);
+  width: 400px;
+  height: 100%;
+  overflow-y: auto;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.app-cart-checkout {
+  padding: 10px;
+  background: white;
+  color: #444;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.app-cart-checkout a {
+  position: absolute;
+  right: 0;
+  padding-right: 30px;
+}
+
+.app-cart-prices {
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+}
+
+.app-cart-prices-total {
+  font-size: 20px;
+  color: #333;
+}
+
+.app-cart-prices-total span {
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+}
+
+.app-cart-gateways {
+  display: flex;
+}
+
+.app-cart-gateways-pix {
+  border: 1px solid rgb(22, 194, 183);
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  width: 100px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.app-cart-cupom label {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  color: #666;
+}
+
+.app-cart-cupom input {
+  background: rgb(242, 242, 242) !important;
+  margin-bottom: 5px;
+}
+
+.app-cart-products {
+  height: 250px;
+}
+
+.app-cart-products-empty {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.app-cart-products-empty a {
+  font-size: 150px;
+  color: #999;
+}
+
+.app-cart-header {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.app-cart-header a {
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+}
+
+.app-card-products-header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.app-card-products-header span {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #444;
+}
+
+.app-card-products-header p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  color: #999;
+}
+
+#noticias.card {
+  background: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.app-footer-navbar {
+  position: fixed;
+  width: 100%;
+  background: rgb(242, 242, 242);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  bottom: 0;
+  border-top: 3px solid var(--primary-color);
+  z-index: 1036;
+}
+
+.app-footer-navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-left: -25px;
+}
+
+.app-footer-navbar a {
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 30px;
+  color: #888 !important;
+}
+
+.card-header#header-noticias {
+  /* background: linear-gradient(
+      to left,
+      rgba(19, 165, 196, 0) 0%,
+      rgba(19, 165, 196, 0) 10%,
+      rgba(0, 0, 0, 0.65) 89%,
+      rgba(0, 0, 0, 0.75) 100%
+    ); */
+  background-size: cover;
+  background-color: var(--primary-color);
+}
+
+#noticias.card .card-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 400px !important;
+  position: relative;
+  padding: 15px 25px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+#noticias.card-body p {
+  color: #999;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.fundo-header {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.news-title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.news-author {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.app-sidebar-card {
+  background: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.app-sidebar-card-header {
+  background-color: var(--primary-color);
+  width: 100%;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  h2 {
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.app-sidebar-card-body {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    font-size: 19px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.app-header-image {
+  z-index: 998;
+  background: url("/assets/img/render_background.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  border-bottom: 10px solid var(--primary-color);
+}
+
+.app-header-image img {
+  padding: 50px;
+}
+
+.app-section-navbar {
+  background-size: cover;
+  position: sticky;
+  top: 0;
+  transition: 1s;
+  z-index: 1031;
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.app-navbar-cart-icon span {
+  position: absolute;
+  background: white;
+  margin-top: -5px;
+  padding: 5px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -8px;
+}
+
+.app-navbar-cart-icon {
+  margin-right: 40px;
+  margin-left: 100px;
+}
+
+.app-navbar-cart-icon span p {
+  display: flex;
+  color: var(--primary-color);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: -5px;
+}
+
+.app-section-navbar a {
+  transition: all ease 0.3s;
+  font-size: 19px;
+  color: #eee !important;
+  cursor: pointer;
+  align-items: center;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.app-section-navbar .nav-item a {
+  display: flex;
+}
+.app-section-navbar a span {
+  margin-left: 5px;
+}
+.app-section-navbar a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.app-navbar-button-logo {
+  text-decoration: none;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: white !important;
+  transition: 0.5s;
+}
+
+.app-navbar-button-logo a {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.footer {
+  position: relative;
+  background: #131313;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  border-top: 10px solid var(--primary-color);
+}
+
+@media (max-width: 912px) {
+  .footer {
+    display: none;
+  }
+}
+
+@media (min-width: 912px) {
+  body {
+    bottom: 1000px;
+  }
+}
+
+.footer p {
+  font-size: 12px;
+  line-height: 12px;
+}
+.footer a {
+  color: var(--primary-color);
+}
+.footer .logo {
+  border: none;
+  background: #212121;
+  height: auto;
+  padding: 30px 10px 15px;
+}
+.footer .logo img {
+  margin-right: auto;
+}
+.footer .overlay {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 115px;
+  background: black;
+  padding: 30px;
+  color: white;
+}
+.footer .credits {
+  position: absolute;
+  width: 120px;
+  bottom: 0px;
+  right: 0;
+}
+.footer ul {
+  float: right;
+}
+.footer ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px 10px;
+}
+.footer ul li a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+.footer .footer-social {
+  float: right;
+}
+.footer .footer-social .icon-twitter {
+  font-size: 17px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  background: #55acee;
+}
+
+.footer .footer-social .icon-discord {
+  font-size: 17px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  background: #7289da;
+}
+
+@media (min-width: 992px) {
+  .app-footer-navbar {
+    display: none;
+  }
+  .app-card-info {
+    height: 100% !important;
+  }
+  .app-card-modal-root {
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 992px) {
+  .app-cart-card {
+    width: 100% !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+  }
+  .app-card-modal-root .app-card-modal {
+    width: 100% !important;
+    height: calc(90% + 5px) !important;
+    border-radius: 0 !important;
+  }
+  .app-card-modal-actions a {
+    border-top-right-radius: 0 !important;
+  }
+  .app-cart-opened {
+    left: 0 !important;
+    transition: 0.5s !important;
+  }
+  .app-cart-opened {
+    left: 0 !important;
+    transition: 0.5s !important;
+    height: calc(100% - 88px) !important;
+  }
+}
+
